@@ -16,9 +16,9 @@ ESP8266 Wiki - https://github.com/esp8266/esp8266-wiki/wiki
 
 How I2C Communication Works and How To Use It with Arduino - https://youtu.be/6IAkYpmA1DQ
 
-### Micropython
+### MicroPython
 
-Official Micropython docs for ESP8266 - https://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/index.html
+Official MicroPython docs for ESP8266 - https://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/index.html
 
 ### MQTT
 
