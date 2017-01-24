@@ -6,9 +6,11 @@ We got this.
 
 Add useful stuff here.
 
-### Datasheets
+### ESP8266
 
 Espressif ESP8266 Resources - https://espressif.com/en/products/hardware/esp8266ex/resources
+
+ESP8266 Wiki - https://github.com/esp8266/esp8266-wiki/wiki
 
 ### I2C
 
