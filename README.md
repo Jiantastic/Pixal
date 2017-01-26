@@ -22,6 +22,7 @@ ESP8266 Wiki - https://github.com/esp8266/esp8266-wiki/wiki
 Adafruit TMP 007 C++ Library - https://github.com/adafruit/Adafruit_TMP007_Library
 
 TMP 007 datasheet - http://www.ti.com/lit/ds/symlink/tmp007.pdf
+                    http://www.ti.com/product/TMP007/description
 
 ### I2C
 
