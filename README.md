@@ -17,7 +17,7 @@ Espressif ESP8266 Resources - https://espressif.com/en/products/hardware/esp8266
 
 ESP8266 Wiki - https://github.com/esp8266/esp8266-wiki/wiki
 
-### TMP 007
+### TMP 007 - https://en.wikipedia.org/wiki/Passive_infrared_sensor
 
 Adafruit TMP 007 C++ Library - https://github.com/adafruit/Adafruit_TMP007_Library
 
