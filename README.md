@@ -34,6 +34,7 @@ TMP 007 datasheet - http://www.ti.com/lit/ds/symlink/tmp007.pdf
 TMP 007 general description - http://www.ti.com/product/TMP007/description
 
 Field of View and range of TMP, *heat map shown* - https://youtu.be/GEGiEi6tcVo
+-Comment: at 1m - object should be close to sensor if not will be affected by others in the field of view
 
 ### I2C
 
