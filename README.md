@@ -12,6 +12,8 @@ We got this.
   <strong>PROBLEM : is TMP007 capable of getting a range of heat values or just one? if it's just one we wouldn't be able to create a   heat map</strong>
   
   <strong>BUSINESS PROPOSITION : Current infrared camera solutions are expensive, what we have here is a 30ish pound IoT device. Able to deploy these sensors in a forest to record the frequency of movement of animals in a certain locations. As the GPS coordinates of sensors have already been determined via an on-board GPS chip, we can visualise where animals move around in the forest and at what times, useful for scientific research etc etc...</strong>
+  
+4. Motion detection based on change in temperature
 
 ## Resources
 
