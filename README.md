@@ -17,6 +17,8 @@ We got this.
   
 4. Motion detection based on change in temperature
 
+5. Victim Detection robot after Earthquakes like this -> https://www.uni-koblenz.de/~agas/Public/Hahn2011HMF.pdf 
+
 ## Resources
 
 Add useful stuff here.
