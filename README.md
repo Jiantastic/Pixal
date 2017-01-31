@@ -33,6 +33,8 @@ TMP 007 datasheet - http://www.ti.com/lit/ds/symlink/tmp007.pdf
 
 TMP 007 general description - http://www.ti.com/product/TMP007/description
 
+Field of View and range of TMP, *heat map shown* - https://youtu.be/GEGiEi6tcVo
+
 ### I2C
 
 How I2C Communication Works and How To Use It with Arduino - https://youtu.be/6IAkYpmA1DQ
