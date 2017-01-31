@@ -3,6 +3,8 @@ We got this.
 
 ## Ideas
 
+0. Various Applications of Thermopiles: http://www.jondetech.com/documents/applications.html
+
 1. Infrared shower body temperature detector - modifies shower temperature based on how cold the human body is
 
 2. Detect number of humans in the area ( do humans emit infrared at a certain wavelength? We can just filter for that particular wavelength) - intruder alarms use passive IR iirc, can use that as a reference
