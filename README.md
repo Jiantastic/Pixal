@@ -61,5 +61,7 @@ Official MicroPython docs for ESP8266 - https://docs.micropython.org/en/latest/e
 
 ### MQTT
 the BB slides basically sums up what we need to know!
+
 MQTT-micrpython: https://github.com/micropython/micropython-lib/tree/master/umqtt.simple
+set up a broker either using PAHO, Mosquitto or mymQTT (mobile)
 
