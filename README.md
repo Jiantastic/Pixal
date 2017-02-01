@@ -16,7 +16,7 @@ We got this.
   
   <strong>BUSINESS PROPOSITION : Current infrared camera solutions are expensive, what we have here is a 30ish pound IoT device. Able to deploy these sensors in a forest to record the frequency of movement of animals in a certain locations. As the GPS coordinates of sensors have already been determined via an on-board GPS chip, we can visualise where animals move around in the forest and at what times, useful for scientific research etc etc...</strong>
   
-  converting temperature (K) to RGB : http://www.tannerhelland.com/4435/convert-temperature-rgb-algorithm-code/
+  converting temperature (K) to RGB : https://gist.github.com/paulkaplan/5184275
   
 4. Motion detection based on change in temperature
 
