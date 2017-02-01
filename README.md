@@ -12,6 +12,7 @@ We got this.
 3. Camera/PIR sensor + TMP007(measure object temperature) to achieve something like this -> http://www.flir.co.uk/flirone/ios-android/ (we just need to map temperatures of a certain range to a certain colour to achieve this) . If we have two cameras, we can use triangulation to determine how far the object is from our sensors. All these data can be processed in the "cloud" and visualised onto a webpage. 
 
   <strong>PROBLEM : is TMP007 capable of getting a range of heat values or just one? if it's just one we wouldn't be able to create a   heat map</strong>
+  => operating temp range: -40 to 125 degree celcius and it's within the thermal imaging color scale 
   
   <strong>BUSINESS PROPOSITION : Current infrared camera solutions are expensive, what we have here is a 30ish pound IoT device. Able to deploy these sensors in a forest to record the frequency of movement of animals in a certain locations. As the GPS coordinates of sensors have already been determined via an on-board GPS chip, we can visualise where animals move around in the forest and at what times, useful for scientific research etc etc...</strong>
   
@@ -28,7 +29,7 @@ We got this.
 Add useful stuff here.
 
 ### ESP8266
-***jun wei is gonna fix the blue flickerin by thursday morning***
+*blue LED flickering is fixed
 
 Espressif ESP8266 Resources - https://espressif.com/en/products/hardware/esp8266ex/resources
 
