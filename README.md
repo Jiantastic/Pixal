@@ -18,6 +18,7 @@ We got this.
 4. Motion detection based on change in temperature
 
 5. Victim Detection robot after Earthquakes like this -> https://www.uni-koblenz.de/~agas/Public/Hahn2011HMF.pdf 
+6. At times of epidemics of diseases causing fever, such as SARS coronavirus and Ebola virus disease, non contact IR sensor can be used to check arriving travellers for fever.
 
 ## Resources
 
