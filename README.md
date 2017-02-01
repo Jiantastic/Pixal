@@ -18,7 +18,10 @@ We got this.
 4. Motion detection based on change in temperature
 
 5. Victim Detection robot after Earthquakes like this -> https://www.uni-koblenz.de/~agas/Public/Hahn2011HMF.pdf 
+
 6. At times of epidemics of diseases causing fever, such as SARS coronavirus and Ebola virus disease, non contact IR sensor can be used to check arriving travellers for fever.
+
+7. Able to set a temperature threshold for TMP 007. Sends an ALERT signal if exceed certain threshold (for example). Can be used to detect change/specific objects (human body at 37C?)
 
 ## Resources
 
@@ -26,6 +29,7 @@ Add useful stuff here.
 
 ### ESP8266
 ***jun wei is gonna fix the blue flickerin by thursday morning***
+
 Espressif ESP8266 Resources - https://espressif.com/en/products/hardware/esp8266ex/resources
 
 ESP8266 Wiki - https://github.com/esp8266/esp8266-wiki/wiki
