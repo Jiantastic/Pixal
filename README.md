@@ -26,6 +26,7 @@ We got this.
 
 7. Able to set a temperature threshold for TMP 007. Sends an ALERT signal if exceed certain threshold (for example). Can be used to detect change/specific objects (human body at 37C?)
 8. Smart fever monitoring system: Parents can visualise the body temperature/fever condition of their kids (even when they are away from home etc) through cloud connected smart phone application which records and send alert notification if the value exceeds a certain threshold level.
+
 ## Resources
 
 Add useful stuff here.
