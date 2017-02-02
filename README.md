@@ -52,12 +52,12 @@ TMP 007 datasheet - http://www.ti.com/lit/ds/symlink/tmp007.pdf
 
 TMP 007 general description - http://www.ti.com/product/TMP007/description
 
-### TMP 007 calibration guide (useful FAQ on page 24) - http://www.tij.co.jp/jp/lit/ug/sbou142/sbou142.pdf
+TMP 007 calibration guide (useful FAQ on page 24) - http://www.tij.co.jp/jp/lit/ug/sbou142/sbou142.pdf
 
 Field of View and range of TMP, *heat map shown* - https://youtu.be/GEGiEi6tcVo
 -Comment: at 1m - object should be close to sensor if not will be affected by others in the field of view
 
-PIR sensor
+### PIR sensor
 
 Enocean A5 07 01 PIR detector - https://www.enocean.com/en/enocean_modules_928mhz/ceiling-mounted-occupancy-sensor-eosc-oem-2/user-manual-pdf/
 
