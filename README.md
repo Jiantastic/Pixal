@@ -3,6 +3,11 @@ We got this.
 
 ## Ideas
 
+Provisional ideas:
+
+* PIR motion, IR sensors:  thermal imaging
+*smart desk for IR and PIR: HVAC personalised desk ecosystem
+
 0. Various Applications of Thermopiles: http://www.jondetech.com/documents/applications.html
 
 1. Infrared shower body temperature detector - modifies shower temperature based on how cold the human body is
