@@ -7,7 +7,7 @@ Provisional ideas:
 
 * PIR motion, IR sensors:  thermal imaging
 
-*smart desk for IR and PIR: HVAC personalised desk ecosystem
+* smart desk for IR and PIR: HVAC personalised desk ecosystem
 
 0. Various Applications of Thermopiles: http://www.jondetech.com/documents/applications.html
 
