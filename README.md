@@ -59,7 +59,10 @@ Field of View and range of TMP, *heat map shown* - https://youtu.be/GEGiEi6tcVo
 
 ### PIR sensor
 
-Enocean A5 07 01 PIR detector - https://www.enocean.com/en/enocean_modules_928mhz/ceiling-mounted-occupancy-sensor-eosc-oem-2/user-manual-pdf/
+Enocean A5 07 01 PIR detector - https://www.enocean.com/en/enocean_modules_928mhz/ceiling-mounted-occupancy-sensor-eosc-oem-2/user-manual-pdf/ (datasheet)
+
+Available at
+https://www.enocean-alliance.org/en/products/peha_easyclick-wall_mounted_occupancy_sensor0/
 
 ### I2C
 
