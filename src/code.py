@@ -31,7 +31,6 @@ def storeRawTemperatureData():
     finalTemperatureData = (hex_int >> 2) * 0.03125
     finalTemperatureData
 
-
 # can just test this with dummy values, matplotlib imshow, colorbar() to plot RGB values for testing
 def rawTemperatureDataToRGBHeatMap():
 
@@ -69,46 +68,3 @@ def debugOutput():
 
 # consider declaring def main here, but test each individual function here first!
 
-
-
-#  m = ustruct.unpack("<h", data)[0]
-
-
-
-
-
-# 3088
-# finalData.decode('ascii')
-
-
-data = i2c.readfrom_mem(64,1,2)
-data = ustruct.unpack("<i", i2c.readfrom_mem(64,3,2))[0]
-data = data >> 2
-data = data * 0.03125
-
-
-# TEMPERATURE CALCULATION DONE
-data = i2c.readfrom_mem(64,3,2)
-finalData = ubinascii.hexlify(bytearray(data))
-stringHex = finalData.decode('ascii')
-hex_int = int(stringHex, 16)
-finalTemperatureData = (hex_int >> 2) * 0.03125
-
-
-
-hex_int = int('0c10', 16)
-
-
-data = i2c.readfrom_mem(64,3,2)
-data = data >> 2
-temperatureData = data * 0.03125
-print (temperatureData)
-
-0.03125
-
-
-i2c = I2C(0)                         # create on bus 0
-i2c = I2C(0, I2C.MASTER)             # create and init as a master
-
-
-i2c.readfrom(...)
