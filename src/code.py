@@ -64,6 +64,7 @@ client.publish("this works holy shit",bytes("Embed Trio damn pro","utf-8"))
 # Using [Pin 12 - Pan (Horizontal)] [Pin 13 - Tilt (Vertical)]
 
 # Import PWM and Pin Libraries# Import PWM and Pin Libraries
+# Import PWM and Pin Libraries
 from machine import Pin, PWM
 import time
 
@@ -85,16 +86,23 @@ def motorMovement():
     while True:
         for i in range(0,max):
             servoX.duty(dCycleX)
-            dCycleX = (dCycleY+dCycleStep) # if i<max else (dCycleX)
+            dCycleX = (60) if i==3 else dCycleX+dCycleStep
             time.sleep(0.5)
+            print("I value: " , i, "X Duty Cycle is ",dCycleX,"Y Duty Cycle is ",dCycleY)
             #insert code to read and send temp data and send to broker
             for j in range(0,max):
                 servoY.duty(dCycleY)
                 dCycleY = (dCycleY+dCycleStep) # if j<max else (dCycleY)
                 time.sleep(0.5)
+                print("J value: " , i, "X Duty Cycle is ",dCycleX,"Y Duty Cycle is ",dCycleY)
                 #insert code to read and send temp data and send to broker
-            dCycleY=60
-        dCycleX=60    
+            dCycleY=60   
+
+#-----------------------------------------------------------------------------------------
+
+motorMovement()
+
+
 
 #-----------------------------------------------------------------------------------------
 
