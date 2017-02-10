@@ -56,9 +56,37 @@ client = MQTTClient(machine.unique_id(),"192.168.0.10")
 client.connect()
 client.publish("this works holy shit",bytes("Embed Trio damn pro","utf-8"))
 
+#----------------Motor references----------------------------------
+# http://micropython-on-esp8266-workshop.readthedocs.io/en/latest/basics.html - Tutorial on setting up 
+# ESP8266 pins 0, 2, 4, 5, 12, 13, 14 and 15 all support PWM
+# Servo Duty Cycle [40-114 OR *30-122* -> 0-180 degree]
+# Duty cycle == Servo Motor Angle
+# Using [Pin 12 - Pan (Horizontal)] [Pin 13 - Tilt (Vertical)]
 
+# Import PWM and Pin Libraries
+from machine import Pin, PWM
+dCycleP = 30
+dCycleT = 30
+dCycleStep = TBD 
+max = 4          #Maximum iteration times 
+
+#Initialise angle as 0 -> duty(30) and Pin allocation
+servoP = PWM(Pin(12), freq=50, duty=dCycleP)
+servoT = PWM(Pin(13), freq=50, duty=dCycleT)
+
+#2 for loops to loop over every pixel
 def motorMovement():
     # get CURRENT_STATE, move according to matrix size
+    for i in max:
+        servoP.duty(dCycleP)
+        global dCycleP = (dCycleT+dCycleStep) if counter<max else (dCycleP)
+        #insert code to read and send temp data and send to broker
+        for j in max:
+            servoT.duty(dCycleT)
+            global dCycleT = (dCycleT+dCycleStep) if counter<max else (dCycleT)
+            #insert code to read and send temp data and send to broker
+            
+#-----------------------------------------------------------------------------------------
     
 def updateState():
     if CURRENT_STATE == (HEAT_MAP_SIZE * HEAT_MAP_SIZE):
