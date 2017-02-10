@@ -98,15 +98,10 @@ def motorMovement():
                 #insert code to read and send temp data and send to broker
             dCycleY=60   
 
-#-----------------------------------------------------------------------------------------
-
 motorMovement()
-
-
-
 #-----------------------------------------------------------------------------------------
 
-motorMovement
+
 
 
     
