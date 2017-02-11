@@ -106,13 +106,13 @@ def motorMovement():
                 print("J value: " , i, "X Duty Cycle is ",dCycleX,"Y Duty Cycle is ",dCycleY)
                 #insert code to read and send temp data and send to broker
                 # getRawTemperatureData |> toRGB |> toJSON |> publishToMQTTBroker
+                print ("getting temperature data...")
                 temperatureData[i][j] = getRawTemperatureData()
                 # TMP 007 temperature range = -40 to 125 Celsius
-                print ("before")
+                print ("calculating RGB equivalent of temperature...")
                 rgbData[i][j] = list(rawTemperatureDataToRGBHeatMap(-40,125,temperatureData[i][j]))
-                print ("after")
         # after one COMPLETE scan, send data to MQTT broker
-        print ("right here")
+        print ("formatting data in JSON format...")
         json = dataToJSON(machine.RTC().datetime(),temperatureData,rgbData)
         print ("final json output!",json)
         time.sleep(1)
