@@ -1,4 +1,4 @@
-# NOTE: main.py and initialise.py is fully functional :D - do not directly modify this file without testing!
+# main.py and initialise.py is fully functional :D - do not directly modify this file without testing!
 from machine import Pin,I2C,PWM
 from umqtt.simple import MQTTClient
 import time 
