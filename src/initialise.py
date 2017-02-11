@@ -1,3 +1,4 @@
+# main.py and initialise.py is fully functional :D - do not directly modify this file without testing!
 from machine import Pin,I2C,PWM
 from umqtt.simple import MQTTClient
 import time 
@@ -32,8 +33,7 @@ def initialiseTimeandNetworkConnection():
     
     sta_if = network.WLAN(network.STA_IF)
     sta_if.active(True)
-    #sta_if.connect('EEERover','exhibition')
-    sta_if.connect('VM2708191','tqGtthwD4gpm')
+    sta_if.connect('EEERover','exhibition')
     time.sleep(0.5)     # make sure connection is correctly established
     print("connection to Wifi: ", sta_if.isconnected())
 
