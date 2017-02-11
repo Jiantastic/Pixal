@@ -17,6 +17,11 @@ HEAT_MAP_SIZE = 4          # Maximum iteration times , (HEAT_MAP_SIZE)^2 = how b
 servoX = PWM(Pin(15), freq=50, duty=dCycleX)
 servoY = PWM(Pin(13), freq=50, duty=dCycleY)
 
+# TODO: 
+# 1. Exception handling?
+# 2. Global import of Python modules?
+# 3. Integrate Ultrasound Sensor info?
+
 def getRawTemperatureData():
 
     # 1 = local temperatureData
