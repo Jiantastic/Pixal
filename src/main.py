@@ -17,11 +17,6 @@ HEAT_MAP_SIZE = 4          # Maximum iteration times , (HEAT_MAP_SIZE)^2 = how b
 servoX = PWM(Pin(15), freq=50, duty=dCycleX)
 servoY = PWM(Pin(13), freq=50, duty=dCycleY)
 
-# initialise 2D heat map to all 0s
-
-# TODO
-# 2. Store temperature data in a 2D list (temperatureData)
-
 def getRawTemperatureData():
 
     # 1 = local temperatureData
@@ -89,6 +84,7 @@ def motorMovement():
     global dCycleY
     global HEAT_MAP_SIZE
 
+    # initialise 2D data stores to all 0s
     temperatureData = [[0 for x in range(HEAT_MAP_SIZE)] for y in range(HEAT_MAP_SIZE)]
     rgbData = [[0 for x in range(HEAT_MAP_SIZE)] for y in range(HEAT_MAP_SIZE)]
 
