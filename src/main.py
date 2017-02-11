@@ -83,7 +83,6 @@ def sendDataToMQTTBroker(client,jsonData):
 
 # Import PWM and Pin Libraries# Import PWM and Pin Libraries
 # Import PWM and Pin Libraries
-# TypeError, object float not callable
 
 def motorMovement():
     global dCycleX
