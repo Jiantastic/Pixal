@@ -1,23 +1,24 @@
 # main.py and initialise.py is fully functional :D - do not directly modify this file without testing!
 from machine import Pin,I2C,PWM
 from umqtt.simple import MQTTClient
-import time 
+import time
 import network
 import machine
 import ubinascii
 import ujson
 import initialise as init
+import ntptime
 
 dCycleX = 60
 dCycleY = 60
-dCycleStep = 6 
+dCycleStep = 6
 HEAT_MAP_SIZE = 4          # Maximum iteration times , (HEAT_MAP_SIZE)^2 = how big the heat map is
 
 #Initialise angle as 0 -> duty(30) and Pin allocation
 servoX = PWM(Pin(15), freq=50, duty=dCycleX)
 servoY = PWM(Pin(13), freq=50, duty=dCycleY)
 
-# TODO: 
+# TODO:
 # 1. Exception handling?
 # 2. Global import of Python modules?
 # 3. Integrate Ultrasound Sensor info?
@@ -75,7 +76,7 @@ def sendDataToMQTTBroker(client,jsonData):
 
 
 #----------------Motor references----------------------------------
-# http://micropython-on-esp8266-workshop.readthedocs.io/en/latest/basics.html - Tutorial on setting up 
+# http://micropython-on-esp8266-workshop.readthedocs.io/en/latest/basics.html - Tutorial on setting up
 # ESP8266 pins 0, 2, 4, 5, 12, 13, 14 and 15 all support PWM
 # Servo Duty Cycle [40-114 OR *30-122* -> 0-180 degree] -> tested 30 to 122
 # Duty cycle == Servo Motor Angle
@@ -94,9 +95,9 @@ def motorMovement():
     rgbData = [[0 for x in range(HEAT_MAP_SIZE)] for y in range(HEAT_MAP_SIZE)]
 
     # MQTT client initialisation
-    client = MQTTClient(machine.unique_id(),"192.168.0.15")
+    client = MQTTClient(machine.unique_id(),"192.168.0.10")
     client.connect()
-    
+
     while True:
         json = ""
         for i in range(0,HEAT_MAP_SIZE):
@@ -124,7 +125,7 @@ def motorMovement():
         sendDataToMQTTBroker(client,json)
         time.sleep(1)
 
-        
+
 
 def start():
     init.initialiseTimeandNetworkConnection()
