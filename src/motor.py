@@ -107,7 +107,7 @@ def motorMovement():
             print("I value: " , i, "X Duty Cycle is ",dCycleX,"Y Duty Cycle is ",dCycleY)
             for j in range(0,HEAT_MAP_SIZE):
                 servoY.duty(dCycleY)
-                dCycleY = (60) if i==(HEAT_MAP_SIZE-1) else (dCycleY+dCycleStep) # if j<max else (dCycleY)
+                dCycleY = (60) if j==(HEAT_MAP_SIZE-1) else (dCycleY+dCycleStep) # if j<max else (dCycleY)
                 time.sleep(0.5)
                 print("J value: " , i, "X Duty Cycle is ",dCycleX,"Y Duty Cycle is ",dCycleY)
                 #insert code to read and send temp data and send to broker

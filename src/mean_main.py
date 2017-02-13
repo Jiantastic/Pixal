@@ -23,22 +23,26 @@ servoY = PWM(Pin(13), freq=50, duty=dCycleY)
 # 2. Global import of Python modules?
 # 3. Integrate Ultrasound Sensor info?
 
-def getRawTemperatureData():
-    temperature_reading = [0 for x in range(TEMP_SAMPLE_SIZE)]
 
+
+
+def getRawTemperatureData():
+    sum_tmp=0
     # 1 = local temperatureData
     # 3 = object temperatureData
     i2c = I2C(scl=Pin(5),sda=Pin(4),freq=100000)
     for k in range(0,TEMP_SAMPLE_SIZE):
-         temperature_reading [k] = i2c.readfrom_mem(64,3,2)
-    temp_list = list (temperature_reading)
-    mean_temp= sum(temp_list) / 4
-    byteHex = ubinascii.hexlify(bytearray(mean_temp))
-    stringHex = byteHex.decode('ascii')
-    hex_int = int(stringHex, 16)
-    finalTemperatureData = (hex_int >> 2) * 0.03125
+         temperature_reading = i2c.readfrom_mem(64,3,2)
+         byteHex = ubinascii.hexlify(bytearray(temperature_reading))
+         stringHex = byteHex.decode('ascii')
+         hex_int = int(stringHex, 16)
+         #finalTemperatureData [k] = (hex_int >> 2) * 0.03125
+         sum_tmp= sum_tmp + (hex_int >> 2) * 0.03125
+         time.sleep(0.3)
+    mean_temp= sum_tmp / TEMP_SAMPLE_SIZE
     time.sleep(0.5)
-    return finalTemperatureData
+    print ("the mean data is ", mean_temp)
+    return mean_temp
 
 # can just test this with dummy values, matplotlib imshow, colorbar() to plot RGB values for testing
 # http://stackoverflow.com/questions/20792445/calculate-rgb-value-for-a-range-of-values-to-create-heat-map
@@ -110,7 +114,7 @@ def motorMovement():
             print("I value: " , i, "X Duty Cycle is ",dCycleX,"Y Duty Cycle is ",dCycleY)
             for j in range(0,HEAT_MAP_SIZE):
                 servoY.duty(dCycleY)
-                dCycleY = (60) if i==(HEAT_MAP_SIZE-1) else (dCycleY+dCycleStep) # if j<max else (dCycleY)
+                dCycleY = (60) if j==(HEAT_MAP_SIZE-1) else (dCycleY+dCycleStep) # if j<max else (dCycleY)
                 time.sleep(0.5)
                 print("J value: " , i, "X Duty Cycle is ",dCycleX,"Y Duty Cycle is ",dCycleY)
                 #insert code to read and send temp data and send to broker
