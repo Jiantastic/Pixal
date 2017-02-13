@@ -27,7 +27,7 @@ def start():
 		time.sleep_us(10)
 		trigger.low()
 		try:
-	    	pulse_time = machine.time_pulse_us(echo, 1, 20)
+	    	pulse_time = machine.time_pulse_us(echo_pin, 1, echo_timeout_us)
 	    	mm = pulse_time * 100 // 582
 	    	print ("distance from the target:", mm, "mm")
 		except OSError as ex:
