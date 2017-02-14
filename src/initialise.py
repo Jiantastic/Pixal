@@ -21,21 +21,29 @@ import ntptime
 def initialiseTimeandNetworkConnection():
     # Time formatting issues -> https://github.com/micropython/micropython/issues/2237
     # RTC.datetime(): (year, month, day, weekday, hours, minutes, seconds, subseconds)
-    print ("getting time from NTP server...")
-    time.sleep(0.5)
-    ntptime.settime()
 
     # connect to network
     print ("connecting to network...")
     time.sleep(0.5)
     ap_if = network.WLAN(network.AP_IF)
     ap_if.active(False)
-    
+
     sta_if = network.WLAN(network.STA_IF)
+        
+    sta_if.connect('OnePlus3','12345678')
+    time.sleep(5)     # make sure connection is correctly established
+    print("connection to Internet for NTP: ", sta_if.isconnected())
+    
+
+    print ("getting time from NTP server...")
+    ntptime.settime()
+    time.sleep(0.5)
+    sta_if.disconnect()     # disconnect form OnePlus hotspot, connect to EEERover
+
     sta_if.active(True)
     sta_if.connect('EEERover','exhibition')
-    time.sleep(0.5)     # make sure connection is correctly established
-    print("connection to Wifi: ", sta_if.isconnected())
+    time.sleep(5)     # make sure connection is correctly established
+    print("connection to EEERover: ", sta_if.isconnected())
 
 
 # esys/time <- subscribe to this, wait for real time, just do this once at start, then esp8266 will keep track of time on it's own
