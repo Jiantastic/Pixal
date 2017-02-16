@@ -1,6 +1,12 @@
 # Introducing the Pixal
 
+<insert picture here>
+
 A low cost, real-time, cloud-connected thermographic camera.
+
+
+# How it works
+<insert graphs+visualisations here>
 
 
 # Technologies used
@@ -20,6 +26,14 @@ A low cost, real-time, cloud-connected thermographic camera.
 [Mosquitto MQTT Broker](https://mosquitto.org/)
 
 [Paho MQTT Python Client](https://eclipse.org/paho/clients/python/)
+
+
+
+# Effective modifications
+
+<3d printed cube, aluminium foil>
+
+
 
 
 ## Ideas
