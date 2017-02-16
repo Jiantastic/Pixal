@@ -2,7 +2,7 @@
 
 <insert picture here>
 
-A low cost, real-time, cloud-connected thermographic camera.
+A low cost, real-time, cloud-connected [thermographic camera](https://en.wikipedia.org/wiki/Thermographic_camera).
 
 This project is made by [Wei Jian Wong](https://github.com/Jiantastic), [Ngau Wah Xian](https://github.com/wahxian), [Jun Wei Sow](https://github.com/junweisow789).
 
