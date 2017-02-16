@@ -33,7 +33,7 @@ This project is made by [Wei Jian Wong](https://github.com/Jiantastic), [Ngau Wa
 
 **Graphs**
 
-[MatPlotLib imshow()](http://matplotlib.org/users/image_tutorial.html)
+[MatPlotLib imshow()](http://matplotlib.org/users/image_tutorial.html) - Plotting RGB data 
 
 # Effective modifications
 
