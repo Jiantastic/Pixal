@@ -1,5 +1,26 @@
-# embed-trio-IoT
-We got this.
+# Introducing the Pixal
+
+A low cost, real-time, cloud-connected thermographic camera.
+
+
+# Technologies used
+
+**Hardware**
+
+[Adafruit Feather HUZZAH with ESP8266 WiFi](https://www.adafruit.com/product/2821)
+
+[TMP 007 sensor](http://www.ti.com/product/TMP007)
+
+[Two-axis servo motor](https://www.adafruit.com/product/1967)
+
+**Cloud**
+
+[DigitalOcean server](https://www.digitalocean.com/)
+
+[Mosquitto MQTT Broker](https://mosquitto.org/)
+
+[Paho MQTT Python Client](https://eclipse.org/paho/clients/python/)
+
 
 ## Ideas
 
