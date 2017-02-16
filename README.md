@@ -31,7 +31,9 @@ This project is made by [Wei Jian Wong](https://github.com/Jiantastic), [Ngau Wa
 
 [Paho MQTT Python Client](https://eclipse.org/paho/clients/python/)
 
+**Graphs**
 
+[MatPlotLib imshow()](http://matplotlib.org/users/image_tutorial.html)
 
 # Effective modifications
 
