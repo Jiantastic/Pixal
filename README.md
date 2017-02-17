@@ -30,7 +30,7 @@ Breakdown of data sent:
 
 ``` meanTemperature ``` -> We did several calculations of the temperature measurement delay of the TMP 007. Decided on measuring the average temperature over a 2.5 second interval for each pixel scan
 
-``` rgb ``` -> Using a temperature to RGB algorithm as detailed in main.py, we create a range of rgb values from raw temperature data gathered from the TMP 007
+``` rgb ``` -> Using a temperature to [RGB](https://en.wikipedia.org/wiki/RGB_color_model) algorithm as detailed in main.py, we do onboard processing on the ESP8266 by calculating a range of RGB values from raw temperature data gathered from the TMP 007
 
 
 # Applications
