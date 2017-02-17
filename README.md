@@ -72,6 +72,7 @@ The field-of-view of the sensor is limited by enclosing it with a IR shielded en
 ![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/Enclosure_Calculation.png)
 
 The customised enclosure is then 3D printed.
+
 ![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/3D_printer_Machine.jpg)
 
 # Future Work
