@@ -49,8 +49,8 @@ This will enable more accurate determination of the heat source using triangulat
 
 ![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/Pixal_perfect.JPG)
 
-
-
+Relays and actuators can also be added according to the end applications. 
+For example, actuators can be used to turn on fans for warmer areas to improve ventilation.
 
 ## Ideas
 
