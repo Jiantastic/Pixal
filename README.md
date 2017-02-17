@@ -14,6 +14,12 @@ This project is made by [Wei Jian Wong](https://github.com/Jiantastic), [Ngau Wa
 ![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/highlevel.png)
 
 
+# Problems encountered and how we solved it
+
+<image of peace sign>
+
+< conditions in which sensor works>
+
 # Technologies used
 
 **Hardware**
