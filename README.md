@@ -13,6 +13,8 @@ This project is made by [Wei Jian Wong](https://github.com/Jiantastic), [Ngau Wa
 <insert graphs+visualisations here>
 ![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/highlevel.png)
 
+# Applications
+
 
 # Problems encountered and how we solved it
 
