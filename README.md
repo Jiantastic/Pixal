@@ -24,6 +24,15 @@ Final JSON output sent to server
 }
 ```
 
+Breakdown of data sent:
+
+``` time ``` -> On startup, the Pixal queries once from NTP servers and sets its RTC with this information. Subsequent time information do not query from NTP but uses the MicroPython RTC functionality.
+
+``` meanTemperature ``` -> We did several calculations of the temperature measurement delay of the TMP 007. Decided on measuring the average temperature over a 2.5 second interval for each pixel scan
+
+``` rgb ``` -> Using a temperature to RGB algorithm as detailed in main.py, we create a range of rgb values from raw temperature data gathered from the TMP 007
+
+
 # Applications
 
 
