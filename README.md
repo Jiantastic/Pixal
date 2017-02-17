@@ -2,6 +2,8 @@
 
 <insert picture here>
 
+![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/highlevel.png)
+
 A low cost, real-time, cloud-connected [thermographic camera](https://en.wikipedia.org/wiki/Thermographic_camera).
 
 This project is made by [Wei Jian Wong](https://github.com/Jiantastic), [Ngau Wah Xian](https://github.com/wahxian) and [Jun Wei Sow](https://github.com/junweisow789).
@@ -44,8 +46,8 @@ This project is made by [Wei Jian Wong](https://github.com/Jiantastic), [Ngau Wa
 
 Additional sensors will be implemented on the Pixal in the future. This includes a HC-SR04 ultrasonic range sensor.
 This will enable more accurate determination of the heat source using triangulation algorithms. 
-![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/highlevel.png)
-![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/Pixal_perfect.JPG)
+
+![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/Pixal_perfect.JPG)
 
 
 
