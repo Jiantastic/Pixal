@@ -58,7 +58,12 @@ conditions in which sensor works
 # Effective modifications
 
 <3d printed cube, aluminium foil,ultrasonic sensor to measure distance>
+The field-of-view of the sensor is limited by enclosing it with a IR shielded enclosure with a small aperture. The measurements of the enclosure is calculated and tabulated in the table below:
 
+![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/Enclosure_Calculation.png)
+
+The customised enclosure is then 3D printed.
+![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/3D_printer_Machine.jpg)
 
 # Future Work
 
