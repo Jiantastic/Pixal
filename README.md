@@ -16,9 +16,9 @@ This project is made by [Wei Jian Wong](https://github.com/Jiantastic), [Ngau Wa
 
 # Problems encountered and how we solved it
 
-<image of peace sign>
+image of peace sign
 
-< conditions in which sensor works>
+conditions in which sensor works
 
 # Technologies used
 
