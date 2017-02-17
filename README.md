@@ -40,6 +40,10 @@ This project is made by [Wei Jian Wong](https://github.com/Jiantastic), [Ngau Wa
 <3d printed cube, aluminium foil,ultrasonic sensor to measure distance>
 
 
+# Future Work
+
+
+
 
 
 ## Ideas
