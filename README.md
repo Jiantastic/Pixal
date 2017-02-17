@@ -44,7 +44,7 @@ This project is made by [Wei Jian Wong](https://github.com/Jiantastic), [Ngau Wa
 # Future Work
 
 Additional sensors will be implemented on the Pixal in the future. This includes a HC-SR04 ultrasonic range sensor.
-This will enable more accurate determination of the heat source using triangulation algorithms. 
+This will enable more accurate determination of the heat source using triangulation algorithms. Additiional sensor data, such as distance of the object from the sensor can also be collected.
 
 ![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/Pixal_perfect.JPG)
 
