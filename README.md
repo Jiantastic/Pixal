@@ -32,11 +32,11 @@ Final JSON output sent to server
 
 Breakdown of data sent:
 
-``` time ``` -> On startup, the Pixal queries once from NTP servers and sets its RTC with this information. Subsequent time information do not query from NTP but uses the MicroPython RTC functionality.
+```time``` -> On startup, the Pixal queries once from NTP servers and sets its RTC with this information. Subsequent time information do not query from NTP but uses the MicroPython RTC functionality.
 
-``` meanTemperature ``` -> We did several calculations of the temperature measurement delay of the TMP 007. Decided on measuring the average temperature over a 2.5 second interval for each pixel scan
+```meanTemperature``` -> We did several calculations of the temperature measurement delay of the TMP 007. Decided on measuring the average temperature over a 2.5 second interval for each pixel scan
 
-``` rgb ``` -> Using a temperature to [RGB](https://en.wikipedia.org/wiki/RGB_color_model) algorithm as detailed in main.py, we do onboard processing on the ESP8266 by calculating a range of RGB values from raw temperature data gathered from the TMP 007
+```rgb``` -> Using a temperature to [RGB](https://en.wikipedia.org/wiki/RGB_color_model) algorithm as detailed in main.py, we do onboard processing on the ESP8266 by calculating a range of RGB values from raw temperature data gathered from the TMP 007
 
 
 ## Step 3 - Cloud processing
@@ -47,7 +47,7 @@ This is done with the Paho MQTT Python library and Bash scripts.
 
 Here is an example output under contrived conditions ( you can get a more accurate result with a better sensor/further modications )
 
-You could also use the meanTemperature JSON data to plot temperature points on the image if you wish to do so. An example temperature point is shown below.
+You could also use the meanTemperature JSON data to plot temperature points on the image if you wish to do so. A sample temperature point is shown below.
 
 ![alt tag](https://raw.githubusercontent.com/Jiantastic/embed-trio-IoT/master/images/heatMap.png)
 
