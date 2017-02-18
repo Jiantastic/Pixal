@@ -18,7 +18,7 @@ servoX = PWM(Pin(15), freq=50, duty=dCycleX)
 servoY = PWM(Pin(13), freq=50, duty=dCycleY)
 
 # data transformation from raw data across I2C bus into desired temperature information
-# data transformed according to TMP 007 datasheet ->
+# data transformed according to TMP 007 datasheet -> http://www.ti.com/lit/ds/symlink/tmp007.pdf
 def getRawTemperatureData():
     sum_tmp=0
     i2c = I2C(scl=Pin(5),sda=Pin(4),freq=100000)
@@ -34,8 +34,6 @@ def getRawTemperatureData():
     print ("the mean data is ", mean_temp)
     return mean_temp
 
-# can just test this with dummy values, matplotlib imshow, colorbar() to plot RGB values for testing
-# http://stackoverflow.com/questions/20792445/calculate-rgb-value-for-a-range-of-values-to-create-heat-map
 def rawTemperatureDataToRGBHeatMap(minimum, maximum, value):
     minimum, maximum = float(minimum), float(maximum)
     ratio = 2 * (value-minimum) / (maximum - minimum)
