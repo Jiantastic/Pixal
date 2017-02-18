@@ -56,7 +56,9 @@ This image shows the relative hot and cold areas within an image where red is ho
 # Applications
 
 Night vision thermal imaging
+
 Heat leakage detection
+
 Non-contact temperature sensing
 
 
