@@ -102,9 +102,10 @@ We attempted to use a 3D printed IR enclousure wrapped in aluminium foil to limi
 # Future Work
 
 Additional sensors will be implemented on the Pixal in the future. This includes a HC-SR04 ultrasonic range sensor.
-This will enable more accurate determination of the heat source using triangulation algorithms. Additiional sensor data, such as distance of the object from the sensor can also be collected.
+This will enable more accurate determination of the heat source by knowing the distance between the sensor and object. Furthermore, the 3D location of the heat source can also be determined using multiple ultrasonic range sensor and triangulation algorithms. 
+The end product will look like the image below.
 
 ![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/Pixal_perfect.JPG)
 
-Relays and actuators can also be added according to the end applications. 
-For example, actuators can be used to turn on fans for warmer areas to improve ventilation.
+Relays and actuators can also be added according to the end-application. 
+For example, relays can be used to switch on fans for warmer areas to improve ventilation.
