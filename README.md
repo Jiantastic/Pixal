@@ -10,9 +10,17 @@ This project is made by [Wei Jian Wong](https://github.com/Jiantastic), [Ngau Wa
 
 
 # How it works
-<insert graphs+visualisations here>
 ![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/highlevel.png)
 
+## Step 1 - Gathering raw temperature data
+
+We have the TMP 007 sensor attached to a 2-axis servo. We have the 2-axis servo move in a square matrix (similar to the picture shown below) in X and Y directions. We then use the TMP 007 to measure 1 pixel worth of temperature data for approximately 2.5 seconds to get an accurate(averaged) temperature reading. We repeat this for however large the square matrix is ( adjustable with the HEAT_MAP_SIZE constant ), or in the example image below a 4x4 matrix. 
+
+Image 1
+
+## Step 2 - Onboard processing
+
+The temperature data collected is then turned into RGB values according to an algorithm. This RGB data is then sent to the server, alongside the current time and mean temperature data in JSON format. The ESP8266 will connect to your desired wireless network (GSM/WiFi/Satellite) and send this data to your designated server.
 
 Final JSON output sent to server
 
@@ -33,10 +41,23 @@ Breakdown of data sent:
 ``` rgb ``` -> Using a temperature to [RGB](https://en.wikipedia.org/wiki/RGB_color_model) algorithm as detailed in main.py, we do onboard processing on the ESP8266 by calculating a range of RGB values from raw temperature data gathered from the TMP 007
 
 
+## Step 3 - Cloud processing
+
+We have set up an Mosquitto MQTT broker which is listening continuously for new data. Once it has received new data, it will do additional processing, graph generation and file relocation to generate an image to display on a web page.
+
+This is done with the Paho MQTT Python library and Bash scripts.
+
+Here is an example output under contrived conditions ( you can get a more accurate result with a better sensor )
+
+
+Image 2
+
+
+
 # Applications
 
 
-# Problems encountered and how we solved it
+# Problems and limitations encountered
 
 image of peace sign
 
