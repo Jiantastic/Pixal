@@ -47,9 +47,9 @@ This is done with the Paho MQTT Python library and Bash scripts.
 
 Here is an example output under contrived conditions ( you can get a more accurate result with a better sensor/further modications )
 
-You could also use the meanTemperature JSON data to plot temperature points on the image if you wish to do so.
+You could also use the meanTemperature JSON data to plot temperature points on the image if you wish to do so. An example temperature point is shown below.
 
-![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/exampleHeatMap.png)
+![alt tag](https://raw.githubusercontent.com/Jiantastic/embed-trio-IoT/master/images/heatMap.png)
 
 This image shows the relative hot and cold areas within an image where red is hotter. To produce this image, we had someone do a [V sign](https://en.wikipedia.org/wiki/V_sign) in front of the sensor. The red coloured areas in the graph correspond to a human hand. We used [MatPlotLib imshow()](http://matplotlib.org/users/image_tutorial.html) to produce the graphs.
 
