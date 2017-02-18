@@ -27,9 +27,9 @@ def getRawTemperatureData():
          byteHex = ubinascii.hexlify(bytearray(temperature_reading))
          stringHex = byteHex.decode('ascii')
          hex_int = int(stringHex, 16)
-         sum_tmp= sum_tmp + (hex_int >> 2) * 0.03125
+         sum_tmp = sum_tmp + (hex_int >> 2) * 0.03125
          time.sleep(0.3)
-    mean_temp= sum_tmp / TEMP_SAMPLE_SIZE
+    mean_temp = sum_tmp / TEMP_SAMPLE_SIZE
     time.sleep(0.5)
     print ("the mean data is ", mean_temp)
     return mean_temp
@@ -63,7 +63,7 @@ def sendDataToMQTTBroker(client,jsonData):
     print("sent data to MQTT broker!")
 
 #----------------Motor references----------------------------------
-# http://micropython-on-esp8266-workshop.readthedocs.io/en/latest/basics.html - Tutorial on setting up
+# http://micropython-on-esp8266-workshop.readthedocs.io/en/latest/basics.html
 # ESP8266 pins 0, 2, 4, 5, 12, 13, 14 and 15 all support PWM
 # Servo Duty Cycle [40-114 OR *30-122* -> 0-180 degree] -> tested 30 to 122
 # Duty cycle == Servo Motor Angle
