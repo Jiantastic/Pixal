@@ -51,7 +51,7 @@ You could also use the meanTemperature JSON data to plot temperature points on t
 
 ![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/exampleHeatMap.png)
 
-This image shows the relative hot and cold areas within an image where red is hotter. To produce this image, we had someone do a [V sign](https://en.wikipedia.org/wiki/V_sign) in front of the sensor. The red coloured areas in the graph correspond to a human hand.
+This image shows the relative hot and cold areas within an image where red is hotter. To produce this image, we had someone do a [V sign](https://en.wikipedia.org/wiki/V_sign) in front of the sensor. The red coloured areas in the graph correspond to a human hand. We used [MatPlotLib imshow()](http://matplotlib.org/users/image_tutorial.html) to produce the graphs.
 
 # Applications
 
