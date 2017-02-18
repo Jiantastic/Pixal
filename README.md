@@ -56,12 +56,6 @@ This image shows the relative hot and cold areas within an image where red is ho
 # Applications
 
 
-# Problems and limitations encountered
-
-image of peace sign
-
-conditions in which sensor works
-
 # Technologies used
 
 **Hardware**
@@ -84,16 +78,22 @@ conditions in which sensor works
 
 [MatPlotLib imshow()](http://matplotlib.org/users/image_tutorial.html) - Plotting RGB data 
 
-# Effective modifications
+# Modifications
 
-<3d printed cube, aluminium foil,ultrasonic sensor to measure distance>
-The field-of-view of the sensor is limited by enclosing it with a IR shielded enclosure with a small aperture. The measurements of the enclosure is calculated and tabulated in the table below:
+The field-of-view of the sensor is limited by enclosing it with a IR shielded enclosure (like aluminium foil) with a small aperture. The measurements of the enclosure is calculated and tabulated in the table below:
 
 ![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/Enclosure_Calculation.png)
 
 The customised enclosure is then 3D printed.
 
 ![alt tag](https://github.com/Jiantastic/embed-trio-IoT/blob/master/images/3D_printer_Machine.jpg)
+
+
+# Problems and limitations encountered
+
+Our limitation here was the TMP 007 sensor. As the TMP 007 only measures a single temperature value, we have to put it on a 2-axis servo to generate a heat map. It takes about 40 seconds to produce a 4x4 heat map. However, if you had a larger array of non-contact IR sensors - say a 64x64 IR sensors with a smaller field-of-view (FOV) per sensor, you would be able to generate a far larger, more accurate heat map with a fraction of the time.
+
+We attempted to use a 3D printed IR enclousure wrapped in aluminium foil to limit the TMP 007 FOV according to the specifications stated by Texas Instruments but on hindsight it would have produced better results if we had an enclosure directly on top of the sensor as explained in this [video](https://youtu.be/GEGiEi6tcVo).
 
 # Future Work
 
