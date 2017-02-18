@@ -60,6 +60,7 @@ def on_message(mqttc, obj, msg):
     plt.close()
     # calls a bash script which does further processing and file relocation
     subprocess.call("/home/mosquitto/script.sh")
+    
 def on_publish(mqttc, obj, mid):
     print("mid: "+str(mid))
 
