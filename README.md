@@ -43,7 +43,7 @@ Breakdown of data sent:
 
 ## Step 3 - Cloud processing
 
-We have set up an Mosquitto MQTT broker which is listening continuously for new data. Once it has received new data, it will do additional processing, graph generation and file relocation to generate an image to display on a web page.
+We have set up an Mosquitto MQTT broker which is listening continuously for new data. Any time it has received new data,it will run a Python callback that does additional processing, graph generation and file relocation to generate an image to display on a web page.
 
 This is done with the Paho MQTT Python library and Bash scripts.
 
