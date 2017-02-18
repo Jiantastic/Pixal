@@ -34,6 +34,7 @@ def getRawTemperatureData():
     print ("the mean data is ", mean_temp)
     return mean_temp
 
+# converts raw temperature values into their RGB equivalent, changes according to quantization range
 def rawTemperatureDataToRGBHeatMap(minimum, maximum, value):
     minimum, maximum = float(minimum), float(maximum)
     ratio = 2 * (value-minimum) / (maximum - minimum)
