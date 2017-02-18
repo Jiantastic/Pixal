@@ -6,7 +6,7 @@ A low cost, real-time, cloud-connected [thermographic camera](https://en.wikiped
 
 This project is made by [Wei Jian Wong](https://github.com/Jiantastic), [Ngau Wah Xian](https://github.com/wahxian) and [Jun Wei Sow](https://github.com/junweisow789).
 
-
+Have a look at our website [here](https://junweisow789.github.io/).
 
 
 # How it works
