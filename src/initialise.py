@@ -1,107 +1,29 @@
-# main.py and initialise.py is fully functional :D - do not directly modify this file without testing!
-from machine import Pin,I2C,PWM
-from umqtt.simple import MQTTClient
-import time 
 import network
-import machine
-import ubinascii
-import ujson
 import ntptime
 
-
-# two functions here, initialiseNetworkConnection() AND getRealTime()
-# get to same wifi network, then get real time from MQTTBroker
-# this code should be initialised on startup
-# ampy -p /dev/tty.SLAB_USBtoUART put ampy.py
-# NOTES: there is a time delay between sucessful wifi connection
-# how this works: 
-# import initialise as init
-# init.initialiseTimeandNetworkConnection()
+# this code is initialised every time ESP8266 gets power, gets real time from NTP server + connect to WiFi
+# the do_connect() loop waits until it receives a network connection (GSM/WiFi/Satellite)
+# this ensures that the main.py code doesn't execute until a network connection is secured
+# modify sta_if.connect('<insert_network_name>','<insert_password>') with your own WiFi network
 
 def initialiseTimeandNetworkConnection():
     # Time formatting issues -> https://github.com/micropython/micropython/issues/2237
     # RTC.datetime(): (year, month, day, weekday, hours, minutes, seconds, subseconds)
-
-    # connect to network
-    print ("connecting to network...")
-    time.sleep(0.5)
+    # this issue is handled automatically by ntptime.settime() function
     ap_if = network.WLAN(network.AP_IF)
     ap_if.active(False)
 
-    sta_if = network.WLAN(network.STA_IF)
-        
-    sta_if.connect('OnePlus3','12345678')
-    time.sleep(5)     # make sure connection is correctly established
-    print("connection to Internet for NTP: ", sta_if.isconnected())
-    
+    def do_connect():
+        import network
+        sta_if = network.WLAN(network.STA_IF)
+        if not sta_if.isconnected():
+            print('connecting to network...')
+            sta_if.active(True)
+            sta_if.connect('<insert_network_name>','<insert_password>')
+            while not sta_if.isconnected():
+                pass
+        print('network config:', sta_if.ifconfig())
 
+    do_connect()
     print ("getting time from NTP server...")
     ntptime.settime()
-    time.sleep(0.5)
-    sta_if.disconnect()     # disconnect form OnePlus hotspot, connect to EEERover
-
-    sta_if.active(True)
-    sta_if.connect('EEERover','exhibition')
-    time.sleep(5)     # make sure connection is correctly established
-    print("connection to EEERover: ", sta_if.isconnected())
-
-
-# esys/time <- subscribe to this, wait for real time, just do this once at start, then esp8266 will keep track of time on it's own
-
-
-
-# REAL_TIME = 0
-# realTime = True
-
-# def sub_cb(topic, msg):
-#     print((topic, msg))
-#     getRealTime = False
-
-# b'{"date":"2017-01-12 23:16:43+00:00"}')
-
-# def getRealTime():
-#     client = MQTTClient(machine.unique_id   (),"192.168.0.10")
-#     client.set_callback(sub_cb)
-#     client.connect()
-#     client.subscribe("esys/time")
-#     while realTime:
-#         client.check_msg()
-#         time.sleep(1)
-#         # find a way to kill the application after I get a valid timestamp
-
-
-#     client.disconnect()
-
-
-
-
-# a = b'{"date":"2017-01-12 22:16:43+00:00"}'
-# b = ujson.dumps(a)
-# c = ujson.loads(b)
-# d = ujson.loads(c)
-# d['date']
-
-# year = int(d['date'][0:4])
-# month = int(d['date'][5:7])
-# day = int(d['date'][8:10])
-# hour = int(d['date'][11:13])
-# minute = int(d['date'][14:16])
-# second = int(d['date'][17:19])
-
-# rtc = machine.RTC()
-# rtc.datetime((year,month,day,hour,minute,second,0,0))
-# print ("initialised time to ",rtc.datetime())
-
-
-    # use machine.RTC library
-    # rtc = machine.RTC()
-    # rtc.datetime((2014, 5, 1, 0, 4, 13, 0, 0)) <- documentation is wrong
-    # rtc.datetime() <- get real time, documentation is wrong
-    # settings to use rtc.datetime((year,month,day,hour,minute,second,0,0))
-
-# get this data -> b'{"date":"2017-01-12 23:16:43+00:00"}' -> ujson dump -> get year time date 
-
-
-
-# b'{"date":"2017-01-12 23:43:44+00:00"}'
-# b'{"date":"2017-01-12 23:44:44+00:00"}
