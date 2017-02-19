@@ -1,3 +1,8 @@
+# Broadly speaking, does 3 distinct steps - code is executed automatically when ESP8266 is powered
+# 1. Get current time and connect to WiFi
+# 2. connect to cloud-based MQTT broker
+# 3. Get temperature data via 2-axis servo movement, onboard processing of temperature -> RGB values
+
 from machine import Pin,I2C,PWM
 from umqtt.simple import MQTTClient
 import time
