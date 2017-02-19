@@ -1,3 +1,5 @@
+# take it RGB values computed via onboard processing, use MatPlotLib imshow() to plot RGB values
+
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import numpy as np
